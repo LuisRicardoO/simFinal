@@ -31,7 +31,7 @@ if (isset($_GET['operation'])) {
                         $row = mysqli_fetch_array($result);
                         if (isset($row['type'])) {
                             $type = $row['type'];
-                            if ($type == 1 || $type == 2 || $type == 3) {
+                            if ($type == 1 || $type == 2 || $type == 3||$type==4) {
                                 $todo = "goMenu";
                                 $_SESSION['started'] = 'true';
                                 $_SESSION['user'] = $_POST['user'];
