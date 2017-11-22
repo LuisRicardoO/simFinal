@@ -31,18 +31,16 @@ if (isset($_GET['operation'])) {
                         $row = mysqli_fetch_array($result);
                         if (isset($row['type'])) {
                             $type = $row['type'];
-                            if ($type == 1 || $type == 2 || $type == 3||$type==4) {
+                            if ($type == 1 || $type == 2 || $type == 3 || $type == 4) {
                                 $todo = "goMenu";
                                 $_SESSION['started'] = 'true';
                                 $_SESSION['user'] = $_POST['user'];
                                 $_SESSION['type'] = $type;
-
                             } else {
                                 $todo = "goUserNotValid";
                             }
                         }
-
-                    }else{
+                    } else {
                         $todo = "goWrongLogin";
                     }
                 } else {
@@ -58,7 +56,17 @@ if (isset($_GET['operation'])) {
             $todoStatedSession = false;
             break;
         case "menu":
-            $todo="goMenu";
+            $todo = "goMenu";
+            $todoMenu = "welcome";
+            if (isset($_GET['operationMenu'])) {
+                $todoMenu = $_GET['operationMenu'];
+            }
+            break;
+
+        case "assintant":
+            if (isset($_GET['operationMenu'])) {
+
+            }
             break;
         default:
             $todo = "goHome";
@@ -120,7 +128,7 @@ if (isset($_GET['operation'])) {
                     case "goMenu":
                         if (isset($_SESSION['started']) && ($_SESSION['started'] == true) && ($_SESSION['type'] != 0)) {
                             include "funcMenu.php";
-                        }else{
+                        } else {
                             include "login.php";
                         }
                         break;

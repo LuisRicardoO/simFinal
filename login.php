@@ -4,7 +4,7 @@
 
 
 <body>
-	<form method="POST" action="http://localhost/trabFinal/repo/index.php?operation=checkLogin">
+	<form method="POST" action="./index.php?operation=checkLogin">
 		<p>Username: <input type="text" name="user" >
         <?php
            if($wrongLogin)
