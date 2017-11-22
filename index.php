@@ -36,10 +36,14 @@ if (isset($_GET['operation'])) {
                                 $_SESSION['started'] = 'true';
                                 $_SESSION['user'] = $_POST['user'];
                                 $_SESSION['type'] = $type;
+
                             } else {
                                 $todo = "goUserNotValid";
                             }
                         }
+
+                    }else{
+                        $todo = "goWrongLogin";
                     }
                 } else {
                     $todo = "goWrongLogin";
