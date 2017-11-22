@@ -32,7 +32,7 @@ if (isset($_GET['operation'])) {
                         if (isset($row['type'])) {
                             $type = $row['type'];
                             if ($type == 1 || $type == 2 || $type == 3) {
-                                $todo = "goSession";
+                                $todo = "goMenu";
                                 $_SESSION['started'] = 'true';
                                 $_SESSION['user'] = $_POST['user'];
                                 $_SESSION['type'] = $type;
@@ -52,6 +52,9 @@ if (isset($_GET['operation'])) {
             session_destroy();
             $todo = "goLogOut";
             $todoStatedSession = false;
+            break;
+        case "menu":
+            $todo="goMenu";
             break;
         default:
             $todo = "goHome";
@@ -76,7 +79,13 @@ if (isset($_GET['operation'])) {
             ?>
         </td>
         <td width=10% align="center" valign="center" bgcolor="#5f9ea0">
-            Sign up
+            <?php
+            if (isset($_SESSION['started']) && ($_SESSION['started'] == true)) {
+                echo '<a href = "index.php?operation=menu"> Menu</a >';
+            } else {
+                echo '<a href = "index.php?operation=register"> Sign up</a >';
+            }
+            ?>
         </td>
     </tr>
     <!--<tr height=2.5%>
@@ -104,25 +113,15 @@ if (isset($_GET['operation'])) {
                     case "goLogOut":
                         echo "see you next time";
                         break;
+                    case "goMenu":
+                        if (isset($_SESSION['started']) && ($_SESSION['started'] == true) && ($_SESSION['type'] != 0)) {
+                            include "funcMenu.php";
+                        }else{
+                            include "login.php";
+                        }
+                        break;
                 endswitch;
                 //subcontent
-                if (isset($_SESSION['started']) && ($_SESSION['started'] == true)) {
-
-                    switch ($_SESSION['type']):
-                        case 1://reseacher
-                            echo "welcome reseacher";
-                            break;
-                        case 2://client
-                            echo "welcome client";
-                            break;
-                        case 3://nutritionist
-                            //echo "welcome nutritionist";
-                            include "nutritionist.php";
-                            break;
-                        default:
-                            echo "u should never arrive here";
-                    endswitch;
-                }
             } else {
                 include "home.php";
             }
