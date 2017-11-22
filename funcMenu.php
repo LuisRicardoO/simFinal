@@ -10,7 +10,7 @@
                     echo "| Activate or deactivate user ";
                     break;
                 case 2://client
-                    echo "Register ";
+                    echo '<a href="index.php?operation=menu&operationMenu=register">Register </a>';
                     echo "| View or edit profile ";
                     echo "| Register diet ";
                     echo "| register exercice ";
