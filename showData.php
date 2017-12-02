@@ -5,7 +5,7 @@
  * Date: 23/11/2017
  * Time: 19:42
  */
-
+//hgfd
 $link = mysqli_connect('localhost', 'root', '', 'SIM2')
 or die('Error connecting to the server: ' . mysqli_error($link));
 echo $_SESSION['type'];
