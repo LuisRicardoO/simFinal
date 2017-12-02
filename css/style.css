@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 30px;
+    line-height: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+th,td{
+    padding: 8px 10px;
+    height:40px;
+    border:none;
+}
+
+th{
+    background-color: #659AB2;
+    text-align: center;
+}
+
+td{
+    background-color: #FFF0DD;
+    border:none;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    border-collapse: separate;
+    border-spacing:5px;
+    border:none;
+    background-color: bisque;
+}
+
+a{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.spacer {
+    height: 50px;
+}
+
+.sect {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.subSection {
+    height: 50%;
+    background: bisque;
+}
+
+.sectOne {
+    background-image: url("../img/home.jpeg");
+}
+
+.sectTwo {
+    background-image: url("../img/client.jpeg");
+}
+
+.sectLogin {
+    background-image: url("../img/home.jpeg");
+}
+
+.sectAssis {
+    background-image: url("../img/assistant.jpg");
+}
+
+.sectClient{
+    background-image: url("../img/client.jpeg");
+}
+
+.sectNutr{
+    background-image: url("../img/nutr.jpeg");
+}
+
+.sectResearcher{
+    background-image: url("../img/researcher.jpg");
+}
+
+.container {
+    background-color: bisque;
+    position: absolute;
+    text-align: center;
+}
+
+.containerLogin {
+
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -100px;
+
+}
+
+.containerAssis {
+
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -100px;
+    text-align: center;
+}
+
+.containerAssisNewUser {
+    width: 200px;
+    height: 450px;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -225px;
+    text-align: center;
+}
+
+.containerAssisTable{
+    position: absolute;
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    left: 50%;
+    margin-left: -300px;
+    top: 50%;
+    margin-top: -150px;
+    background-color: bisque;
+}
+
+
+
+
+

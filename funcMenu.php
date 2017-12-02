@@ -38,7 +38,11 @@
                     echo "welcome";
                     break;
                 case "newUser";
-                    include "newUser.php";
+                    include "formNewUser.php";
+                    break;
+                case "register":
+                    $changeData=false;
+                    include "formRegistClient.php";
                     break;
                 default:
                     echo "error";
